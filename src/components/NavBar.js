@@ -16,21 +16,21 @@ const NavBar = () => {
     },
     {
       id: 3,
-      path: '/MyProfile',
-      text: 'My profile',
+      path: '/Dragons',
+      text: 'Dragons',
     },
     {
       id: 4,
-      path: '/Dragons',
-      text: 'Dragons',
+      path: '/MyProfile',
+      text: 'My profile',
     },
   ];
 
   return (
-    <nav>
+    <nav className="navbar">
       <img className="logo" src={logo} alt="logo-planet" />
-      <h1> Space Travellers&apos; Hub </h1>
-      <ul className="ul-links">
+      <div className="navbar-title"><h1 className="title"> Space Travellers&apos; Hub </h1></div>
+      <ul className="menu">
         {Links.map((link) => (
           <li key={link.id} className="li-links">
             <NavLink to={link.path} className="links" activeclassname="active-link">
