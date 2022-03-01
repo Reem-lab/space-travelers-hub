@@ -1,0 +1,22 @@
+.headers-container,
+.mission-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.column-mission {
+  width: 10%;
+}
+
+.column-description {
+  width: 50%;
+}
+
+.column-status {
+  width: 20%;
+}
+
+.column-status-2 {
+  width: 20%;
+}
