@@ -1,20 +1,19 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchMissions } from '../redux/actions/missionsActions';
 import '../style/Missions.css';
 import Mission from './Mission';
 
 const Missions = () => {
-  const [missions, setMissions] = useState([]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    async function fetchData() {
-      const response = await fetch('https://api.spacexdata.com/v3/missions');
-      const data = await response.json();
-      setMissions(data);
-    }
-    fetchData();
+    dispatch(fetchMissions());
   }, []);
 
-  console.log('missions: ', missions[0]);
+  const missions = useSelector((state) => state.missions);
+
+  console.log('MISSIONS STATE: ', missions);
 
   return (
     <>
