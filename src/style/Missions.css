@@ -1,8 +1,12 @@
-.headers-container,
-.mission-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
 }
 
 .column-mission {

@@ -17,19 +17,26 @@ const Missions = () => {
 
   return (
     <>
-      <div className="headers-container">
-        <div className="column-mission">Mission</div>
-        <div className="column-description">Description</div>
-        <div className="column-status">Status</div>
-        <div className="column-status-2">Status2 </div>
-      </div>
-      {missions.map((mission) => (
-        <Mission
-          key={mission.mission_id}
-          name={mission.mission_name}
-          description={mission.description}
-        />
-      ))}
+      <table>
+        <thead>
+          <tr>
+            <th className="column-mission">Mission</th>
+            <th className="column-description">Description</th>
+            <th className="column-status">Status</th>
+            <th className="column-status">_</th>
+          </tr>
+        </thead>
+        <tbody>
+          {missions.map((mission) => (
+            <Mission
+              key={mission.mission_id}
+              name={mission.mission_name}
+              description={mission.description}
+            />
+          ))}
+        </tbody>
+      </table>
+
     </>
   );
 };

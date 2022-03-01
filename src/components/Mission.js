@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 // eslint-disable-next-line react/prop-types
 const Mission = ({ name, description }) => (
-  <div className="mission-container ">
-    <div className="column-mission">{name}</div>
-    <div className="column-description">{description}</div>
-    <div className="column-status"><span>Member</span></div>
-    <div className="column-status-2"><span>Mission</span></div>
-  </div>
+  <tr>
+    <td className="column-mission">{name}</td>
+    <td className="column-description">{description}</td>
+    <td className="column-status"><span className="member">Not A Member</span></td>
+    <td className="column-status-2"><button type="submit" className="mission-button">Join Mission</button></td>
+  </tr>
 );
 
 Mission.propTypes = {
