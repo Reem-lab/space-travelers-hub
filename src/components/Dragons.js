@@ -1,5 +1,7 @@
+import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Dragon from './Dragon';
 
 const basicURL = 'https://api.spacexdata.com/v3/dragons';
 
@@ -33,6 +35,10 @@ const Dragons = () => {
       >
         Fetch
       </Button>
+      <hr />
+      <Container fluid="sm" className="d-flex justify-content-between">
+        <Dragon />
+      </Container>
     </>
   );
 };
