@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMissions, toggleMissionTrue, toggleMissionFalse } from '../redux/actions/missionsActions';
 import '../style/Missions.css';
@@ -49,4 +49,4 @@ const Missions = () => {
   );
 };
 
-export default Missions;
+export default React.memo(Missions);

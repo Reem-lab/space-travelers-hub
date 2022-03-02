@@ -47,4 +47,4 @@ Mission.propTypes = {
   reserved: PropTypes.bool,
 };
 
-export default Mission;
+export default React.memo(Mission);

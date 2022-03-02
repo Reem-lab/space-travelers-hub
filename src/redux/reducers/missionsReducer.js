@@ -7,7 +7,6 @@ const missionsReducer = (state = [], action) => {
     case TOGGLE_MISSION_TRUE:
       return state.map((mission) => {
         if (mission.mission_id !== action.id) {
-          console.log('CURRENT MISSION: ', mission);
           return mission;
         }
         return { ...mission, reserved: true };
@@ -15,7 +14,6 @@ const missionsReducer = (state = [], action) => {
     case TOGGLE_MISSION_FALSE:
       return state.map((mission) => {
         if (mission.mission_id !== action.id) {
-          console.log('CURRENT MISSION: ', mission);
           return mission;
         }
         return { ...mission, reserved: false };
