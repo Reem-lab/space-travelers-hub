@@ -1,37 +1,51 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchMissions, toggleMissionTrue, toggleMissionFalse } from '../redux/actions/missionsActions';
 import '../style/Missions.css';
 import Mission from './Mission';
 
 const Missions = () => {
-  const [missions, setMissions] = useState([]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    async function fetchData() {
-      const response = await fetch('https://api.spacexdata.com/v3/missions');
-      const data = await response.json();
-      setMissions(data);
-    }
-    fetchData();
+    dispatch(fetchMissions());
   }, []);
 
-  console.log('missions: ', missions[0]);
+  const setMissionTrue = (id) => {
+    dispatch(toggleMissionTrue(id));
+  };
+
+  const setMissionFalse = (id) => {
+    dispatch(toggleMissionFalse(id));
+  };
+
+  const missions = useSelector((state) => state.missions);
 
   return (
-    <>
-      <div className="headers-container">
-        <div className="column-mission">Mission</div>
-        <div className="column-description">Description</div>
-        <div className="column-status">Status</div>
-        <div className="column-status-2">Status2 </div>
-      </div>
-      {missions.map((mission) => (
-        <Mission
-          key={mission.mission_id}
-          name={mission.mission_name}
-          description={mission.description}
-        />
-      ))}
-    </>
+
+    <table>
+      <thead>
+        <tr>
+          <th className="column-mission">Mission</th>
+          <th className="column-description">Description</th>
+          <th className="column-status">Status</th>
+          <th className="column-status">_</th>
+        </tr>
+      </thead>
+      <tbody>
+        {missions.map((mission) => (
+          <Mission
+            key={mission.mission_id}
+            name={mission.mission_name}
+            description={mission.description}
+            id={mission.mission_id}
+            toggleMissionTrue={setMissionTrue}
+            toggleMissionFalse={setMissionFalse}
+            reserved={mission.reserved}
+          />
+        ))}
+      </tbody>
+    </table>
   );
 };
 
