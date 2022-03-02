@@ -1,5 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -8,9 +9,11 @@ import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { MDBContainer } from 'mdbreact';
+import { toggleDragonReservation } from '../redux/actions/dragonsActions';
 
 const Dragon = (props) => {
   const { dragon } = props;
+  const dispatch = useDispatch();
 
   return (
 
@@ -28,11 +31,21 @@ const Dragon = (props) => {
         </Card.Title>
         <MDBContainer className="p-0 flex-1">
           <Card.Text className="text-left">
-            <span className="mx-4 h6">Reserved</span>
+            <span className={`mx-4 h6 
+            ${!dragon.reserved ? 'd-none' : ''}`}
+            >
+              Reserved
+            </span>
             {dragon.description}
           </Card.Text>
         </MDBContainer>
-        <Button>Reserve Dragon</Button>
+        <Button
+          variant={!dragon.reserved ? 'primary' : 'secondary'}
+          type="button"
+          onClick={() => dispatch(toggleDragonReservation(dragon.id))}
+        >
+          {!dragon.reserved ? 'Reserve Dragon' : 'Cancel Reservation'}
+        </Button>
       </Col>
       <hr />
     </Row>
