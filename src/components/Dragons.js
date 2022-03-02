@@ -1,43 +1,48 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Dragon from './Dragon';
-
-const basicURL = 'https://api.spacexdata.com/v3/dragons';
-
-const printAPIFetch = (data) => {
-  console.log(data);
-};
-
-const getDragons = () => {
-  fetch(basicURL)
-    .then((resolve) => resolve.json())
-    .then((data) => {
-      printAPIFetch(data);
-    });
-};
+import { fetchDragons } from '../redux/actions/dragonsActions';
 
 const Dragons = () => {
-  const exclamation = '!';
+  const dispatch = useDispatch();
+
+  const dragons = useSelector((state) => state.dragons);
+
+  useEffect(() => {
+    console.log(dragons);
+    if (dragons.length === 0) {
+      dispatch(fetchDragons());
+    }
+  }, []);
+
   return (
     <>
       <h2>
         Hello from  Dragons
-        {exclamation}
       </h2>
       <Button
         variant="primary"
         type="button"
         onClick={() => {
-          getDragons();
+          console.log(dragons);
+          dispatch(fetchDragons());
         }}
         value="fetch"
       >
         Fetch
       </Button>
       <hr />
-      <Container fluid="sm" className="d-flex justify-content-between">
-        <Dragon />
+      <Container fluid className="d-flex flex-wrap p-0">
+        {dragons.map((dragon) => (
+          <Dragon
+            dragon={dragon}
+            key={dragon.id}
+          />
+        ))}
       </Container>
     </>
   );
