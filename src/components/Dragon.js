@@ -14,11 +14,11 @@ const Dragon = (props) => {
 
   return (
 
-    <Row id={dragon.id}>
+    <Row id={dragon.id} className="px-4">
       <Col sm={3} className="d-flex align-items-center p-0">
         <Card.Img src={dragon.flickr_images[0]} />
       </Col>
-      <Col sm={8} className="d-flex flex-column align-items-start">
+      <Col sm={9} className="d-flex flex-column align-items-start">
         <Card.Title>
           {dragon.name}
           <span className="mx-4 h6">
@@ -26,7 +26,7 @@ const Dragon = (props) => {
             {dragon.type}
           </span>
         </Card.Title>
-        <MDBContainer className="p-0">
+        <MDBContainer className="p-0 flex-1">
           <Card.Text className="text-left">
             <span className="mx-4 h6">Reserved</span>
             {dragon.description}

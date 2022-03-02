@@ -32,7 +32,7 @@ const Dragons = () => {
         Fetch
       </Button>
       <hr />
-      <Container fluid="sm" className="d-flex flex-wrap">
+      <Container fluid className="d-flex flex-wrap p-0">
         {dragons.map((dragon) => (
           <Dragon
             dragon={dragon}
