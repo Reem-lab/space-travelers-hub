@@ -3,7 +3,6 @@ import '../style/MyProfile.css';
 
 const MyProfile = () => {
   const myMissions = useSelector((state) => state.missions);
-  console.log(myMissions);
 
   return (
     <div className="my-profile__container">
