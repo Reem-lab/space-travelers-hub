@@ -25,7 +25,7 @@ td {
   width: 20%;
 }
 
-.mission-button {
+.mission-join {
   border: 2px solid black;
   border-radius: 5px;
   background-color: white;
@@ -52,7 +52,7 @@ td {
   color: #fff;
 }
 
-.mission-cancel {
+.mission-leave {
   border: 2px solid red;
   border-radius: 5px;
   background-color: #fff;
