@@ -39,4 +39,24 @@
   background-color: #0290ff;
   color: #fff;
   font-size: 15px;
+  cursor: pointer;
+}
+
+.cancelBtn {
+  width: 11.5rem;
+  height: 2.813rem;
+  border-radius: 0.4rem;
+  background-color: #fff;
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.reserved {
+  background-color: #00d7c6;
+  border-radius: 6px;
+  width: 13px;
+  font-weight: bold;
+  padding: 3px;
+  margin-right: 9px;
 }
