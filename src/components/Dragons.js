@@ -14,7 +14,7 @@ const Dragons = () => {
 
   useEffect(() => {
     console.log(dragons);
-    if (dragons.length === 0) { 
+    if (dragons.length === 0) {
       dispatch(fetchDragons());
     }
   }, []);
