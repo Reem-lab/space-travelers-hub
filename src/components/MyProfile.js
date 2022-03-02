@@ -5,13 +5,15 @@ const MyProfile = () => {
   const myMissions = useSelector((state) => state.missions);
   const rockets = useSelector((state) => state.RocketsReducer);
 
+  console.log(myMissions);
+
   return (
     <div className="my-profile__container">
       <div className="my-profile__rockets">
         <h2>My Rockets</h2>
         {rockets.map((rocket) => (
           rocket.reserved && (
-            <div className="myProf-rocket" key={rocket.id}>
+            <div key={rocket.id}>
               <p>{rocket.rocket_name}</p>
             </div>
           )
