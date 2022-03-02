@@ -13,16 +13,10 @@ export const toggleDragonReservation = (id) => ({
   id,
 });
 
-const printAPIFetch = (data) => {
-  console.log(data);
-};
-
 export const fetchDragons = () => (dispatch) => {
   fetch(basicURL)
     .then((resolve) => resolve.json())
     .then((data) => {
       dispatch(displayFetchedDragons(data));
-      printAPIFetch(data);
-    })
-    .catch((error) => console.log(error));
+    });
 };

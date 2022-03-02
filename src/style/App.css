@@ -10,7 +10,7 @@
 .active {
   text-decoration: underline !important;
   color: #0056b3;
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 2px 2px 4px #000;
 }
 
 @media (prefers-reduced-motion: no-preference) {

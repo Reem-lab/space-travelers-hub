@@ -14,7 +14,6 @@ const dragonsReducer = (state = initialState, action = {}) => {
         return { ...dragon, reserved: !dragon.reserved };
       });
     default:
-      console.log('Dispatched action has no matching case');
       return state;
   }
 };
