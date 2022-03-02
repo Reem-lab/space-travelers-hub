@@ -13,7 +13,6 @@ const Dragons = () => {
   const dragons = useSelector((state) => state.dragons);
 
   useEffect(() => {
-    console.log(dragons);
     if (dragons.length === 0) {
       dispatch(fetchDragons());
     }
@@ -28,7 +27,6 @@ const Dragons = () => {
         variant="primary"
         type="button"
         onClick={() => {
-          console.log(dragons);
           dispatch(fetchDragons());
         }}
         value="fetch"
