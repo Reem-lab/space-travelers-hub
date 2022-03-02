@@ -3,7 +3,8 @@ import '../style/MyProfile.css';
 
 const MyProfile = () => {
   const myMissions = useSelector((state) => state.missions);
-  console.log(myMissions);
+  const myDragons = useSelector((state) => state.dragons);
+  console.log(myDragons);
 
   return (
     <div className="my-profile__container">
@@ -22,6 +23,13 @@ const MyProfile = () => {
       </div>
       <div className="my-profile__dragons">
         <h2>My Dragons</h2>
+        {myDragons.map((dragon) => (
+          dragon.reserved && (
+            <div key={dragon.id}>
+              <p>{dragon.name}</p>
+            </div>
+          )
+        ))}
       </div>
     </div>
   );
