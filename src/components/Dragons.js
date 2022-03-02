@@ -10,11 +10,14 @@ import { fetchDragons } from '../redux/actions/dragonsActions';
 const Dragons = () => {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchDragons());
-  }, []);
-
   const dragons = useSelector((state) => state.dragons);
+
+  useEffect(() => {
+    console.log(dragons);
+    if (dragons.length === 0) { 
+      dispatch(fetchDragons());
+    }
+  }, []);
 
   return (
     <>
@@ -25,6 +28,7 @@ const Dragons = () => {
         variant="primary"
         type="button"
         onClick={() => {
+          console.log(dragons);
           dispatch(fetchDragons());
         }}
         value="fetch"
