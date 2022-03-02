@@ -1,25 +1,22 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMissions, toggleMissionTrue, toggleMissionFalse } from '../redux/actions/missionsActions';
+import { fetchMissions, toggleMission } from '../redux/actions/missionsActions';
 import '../style/Missions.css';
 import Mission from './Mission';
 
 const Missions = () => {
   const dispatch = useDispatch();
+  const missions = useSelector((state) => state.missions);
 
   useEffect(() => {
-    dispatch(fetchMissions());
+    if (missions.length === 0) {
+      dispatch(fetchMissions());
+    }
   }, []);
 
-  const setMissionTrue = (id) => {
-    dispatch(toggleMissionTrue(id));
+  const setMission = (id) => {
+    dispatch(toggleMission(id));
   };
-
-  const setMissionFalse = (id) => {
-    dispatch(toggleMissionFalse(id));
-  };
-
-  const missions = useSelector((state) => state.missions);
 
   return (
 
@@ -39,8 +36,7 @@ const Missions = () => {
             name={mission.mission_name}
             description={mission.description}
             id={mission.mission_id}
-            toggleMissionTrue={setMissionTrue}
-            toggleMissionFalse={setMissionFalse}
+            toggleMission={setMission}
             reserved={mission.reserved}
           />
         ))}
@@ -49,4 +45,4 @@ const Missions = () => {
   );
 };
 
-export default React.memo(Missions);
+export default Missions;
