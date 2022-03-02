@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { displayRockets } from '../redux/actions/RocketsActions';
+import { displayRockets, toggleRocket } from '../redux/actions/RocketsActions';
 import '../style/Rockets.css';
 
 const Rockets = () => {
@@ -8,8 +8,14 @@ const Rockets = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(displayRockets());
+    if (rockets.length === 0) {
+      dispatch(displayRockets());
+    }
   }, []);
+
+  const toggleReservedBtn = (id) => {
+    dispatch(toggleRocket(id));
+  };
 
   return (
     <div className="container">
@@ -24,12 +30,15 @@ const Rockets = () => {
             </div>
             <div className="info">
               <h2>{rocket.rocket_name}</h2>
-              <p className="para">{rocket.description}</p>
-              <button className="reserveBtn" type="button">Reserve Rockets</button>
+              <p className="para">
+                <span className={(rocket.reserved ? 'reserved' : 'cancel')}>{(rocket.reserved ? 'Reserved' : ' ') }</span>
+                {rocket.description}
+              </p>
+              <button className={(!rocket.reserved ? 'reserveBtn' : 'cancelBtn')} type="button" onClick={() => toggleReservedBtn(rocket.id)}>{(!rocket.reserved ? 'Reserve Rockets' : 'Cancel Reservation') }</button>
             </div>
           </div>
         )))
-        }
+      }
     </div>
   );
 };
