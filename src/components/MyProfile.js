@@ -16,7 +16,7 @@ const MyProfile = () => {
     const { dragons } = state;
     return dragons.filter((dragons) => dragons.reserved);
   });
-  
+
   return (
     <div className="my-profile__container">
       <div className="my-profile__rockets">
