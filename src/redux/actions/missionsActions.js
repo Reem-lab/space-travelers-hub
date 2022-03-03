@@ -1,18 +1,12 @@
 export const SET_MISSIONS = 'SET_MISSIONS';
 export const TOGGLE_MISSION = 'TOGGLE_MISSION';
 
-export const setFetchedMissions = (missions) => ({
+export const setMissionsAction = (missions) => ({
   type: SET_MISSIONS,
   missions,
 });
 
-export const fetchMissions = () => (dispatch) => {
-  fetch('https://api.spacexdata.com/v3/missions')
-    .then((response) => response.json())
-    .then((data) => dispatch(setFetchedMissions(data)));
-};
-
-export const toggleMission = (id) => ({
+export const toggleMissionStatusAction = (id) => ({
   type: TOGGLE_MISSION,
   id,
 });
