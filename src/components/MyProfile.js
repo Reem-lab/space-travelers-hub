@@ -12,9 +12,9 @@ const MyProfile = () => {
         <h2>My Rockets</h2>
         {rockets.map((rocket) => (
           rocket.reserved && (
-          <div key={rocket.id}>
-            <p>{rocket.rocket_name}</p>
-          </div>
+            <div key={rocket.id}>
+              <p>{rocket.rocket_name}</p>
+            </div>
           )
         ))}
       </div>
@@ -30,12 +30,10 @@ const MyProfile = () => {
       </div>
       <div className="my-profile__dragons">
         <h2>My Dragons</h2>
-        {myDragons.map((dragon) => (
-          dragon.reserved && (
-            <div key={dragon.id}>
-              <p>{dragon.name}</p>
-            </div>
-          )
+        {myDragons.filter((dragon) => dragon.reserved === true).map((dragon) => (
+          <div key={dragon.id}>
+            <p>{dragon.name}</p>
+          </div>
         ))}
       </div>
     </div>
