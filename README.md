@@ -10,6 +10,7 @@
 ![screenshot](./src/assets/images/app_screenshot.gif)
 
 ## Live Demo
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a87da86c-4b5b-4da9-aa99-b931a84e5afd/deploy-status)](https://62201e415f9b8d1761cf3e80--space-travels-hub.netlify.app/)
 
 ## Table of Contents
