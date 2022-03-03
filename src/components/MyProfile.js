@@ -6,14 +6,17 @@ const MyProfile = () => {
     const { missions } = state;
     return missions.filter((missions) => missions.reserved);
   });
+
   const rockets = useSelector((state) => {
     const { RocketsReducer } = state;
     return RocketsReducer.filter((rockets) => rockets.reserved);
   });
+
   const dragons = useSelector((state) => {
     const { dragons } = state;
     return dragons.filter((dragons) => dragons.reserved);
   });
+  
   return (
     <div className="my-profile__container">
       <div className="my-profile__rockets">
