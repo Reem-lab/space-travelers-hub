@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import Mission from '../components/Mission';
 import store from '../redux/store';
 
-
 const missions = [
   {
     mission_name: 'Thaicom',
