@@ -23,9 +23,9 @@ const MyProfile = () => {
         <h2>My Rockets</h2>
         {rockets.map((rocket) => (
           rocket.reserved && (
-          <div key={rocket.id}>
-            <p>{rocket.rocket_name}</p>
-          </div>
+            <div key={rocket.id}>
+              <p>{rocket.rocket_name}</p>
+            </div>
           )
         ))}
       </div>
