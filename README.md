@@ -11,7 +11,7 @@
 
 ## Live Demo
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/29983eda-49a4-4b16-9a45-4c57712849c0/deploy-status)](https://musing-shaw-1edefa.netlify.app/Dragons)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a87da86c-4b5b-4da9-aa99-b931a84e5afd/deploy-status)](https://eloquent-wozniak-cbde92.netlify.app/)
 
 ## Table of Contents
 
