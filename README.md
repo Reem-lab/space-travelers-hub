@@ -11,7 +11,7 @@
 
 ## Live Demo
 
-[Coming soon...](#/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/29983eda-49a4-4b16-9a45-4c57712849c0/deploy-status)](https://musing-shaw-1edefa.netlify.app/Dragons)
 
 ## Table of Contents
 
@@ -79,18 +79,25 @@ After creating the production build, run:
 
 ### Reem Janina:
 
-**GitHub**  | [@Reem-lab](https://github.com/Reem-lab)
- **Twitter** | [@Rem79940127](https://twitter.com/Rem79940127)
- **LinkedIn** | [reem-janina](https://www.linkedin.com/in/reem-janina-ab74ab21a/)
+ Platform | Badge |
+ --- | --- |
+ **GitHub**  | [@Reem-lab](https://github.com/Reem-lab)
+ **Twitter** | [Rem79940127](https://twitter.com/Rem79940127)
+ **LinkdIn** | [reem-janina](https://www.linkedin.com/in/reem-janina-ab74ab21a/)
+
 
  ### Eduardo:
 
+ Platform | Badge |
+ --- | --- |
  **GitHub**  | [@eduardosancho](https://github.com/eduardosancho)
  **Twitter** | [@sanchitobless](https://twitter.com/sanchitobless)
  **LinkedIn** | [Eduardo](https://www.linkedin.com/in/eduardo-sancho-043641181/)
 
  ### Fabricio:
 
+ Platform | Badge |
+ --- | --- |
  **GitHub**  | [@fabgrel10](https://github.com/fabgrel10)
  **Twitter** | [@fabgrel10](https://twitter.com/fabgrel10)
  **LinkedIn** | [@fabgrel10](https://www.linkedin.com/in/fabgrel10/)
