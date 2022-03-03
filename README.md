@@ -63,7 +63,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Start dev server
 
-- `npm run dev` or `yarn run dev` and open the browser at `http://localhost:3000`
+- `npm start` or `yarn start` and open the browser at `http://localhost:3000`
 
 ### Build for production
 
