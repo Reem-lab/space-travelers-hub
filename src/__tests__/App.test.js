@@ -9,6 +9,7 @@ describe('Test Router behaviour', () => {
   it('When Dragons in navbar is clicked, it renders the Dragons Section', () => {
     // ARRANGE
 
+
     const { container } = render(
       <Provider store={store}>
         <App />
