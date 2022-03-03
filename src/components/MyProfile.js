@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import '../style/MyProfile.css';
+
 const MyProfile = () => {
   const missions = useSelector((state) => {
     const { missions } = state;
