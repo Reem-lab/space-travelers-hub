@@ -13,10 +13,25 @@ export const toggleDragonReservation = (id) => ({
   id,
 });
 
-export const fetchDragons = () => (dispatch) => {
+const fetchDragons = async () => (
   fetch(basicURL)
     .then((resolve) => resolve.json())
-    .then((data) => {
-      dispatch(displayFetchedDragons(data));
+    .then((data) => data)
+);
+
+export const loadDragons = () => async (dispatch) => {
+  const dragonsWiki = await fetchDragons();
+  const dragonsSummary = [];
+
+  Object.keys(dragonsWiki).forEach((id) => {
+    dragonsSummary.push({
+      id: dragonsWiki[id].id,
+      name: dragonsWiki[id].name,
+      type: dragonsWiki[id].type,
+      description: dragonsWiki[id].description,
+      image: dragonsWiki[id].flickr_images[0],
     });
+  });
+
+  dispatch(displayFetchedDragons(dragonsSummary));
 };
