@@ -4,19 +4,20 @@ import '../style/MyProfile.css';
 const MyProfile = () => {
   const myMissions = useSelector((state) => state.missions);
   const myDragons = useSelector((state) => state.dragons);
-  const rockets = useSelector((state) => state.RocketsReducer);
+  const rockets = useSelector((state) => state.RocketsReducer.filter((rock) => rock.reserved));
 
   return (
     <div className="my-profile__container">
       <div className="my-profile__rockets">
         <h2>My Rockets</h2>
-        {rockets.map((rocket) => (
-          rocket.reserved && (
-          <div key={rocket.id}>
-            <p>{rocket.rocket_name}</p>
-          </div>
-          )
-        ))}
+        {
+    rockets.map((rocket) => (
+      <div key={rocket.id}>
+        <p>{rocket.rocket_name}</p>
+      </div>
+    ))
+}
+
       </div>
       <div className="my-profile__missions">
         <h2>My Missions</h2>
