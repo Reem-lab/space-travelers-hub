@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMissions, toggleMission } from '../redux/actions/missionsActions';
+import setMissions from '../redux/api/missionsAPIHelper';
+import { toggleMissionStatusAction } from '../redux/actions/missionsActions';
 import '../style/Missions.css';
 import Mission from './Mission';
 
@@ -10,12 +11,12 @@ const Missions = () => {
 
   useEffect(() => {
     if (missions.length === 0) {
-      dispatch(fetchMissions());
+      dispatch(setMissions());
     }
   }, []);
 
   const setMission = (id) => {
-    dispatch(toggleMission(id));
+    dispatch(toggleMissionStatusAction(id));
   };
 
   return (
