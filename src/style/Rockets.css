@@ -1,0 +1,62 @@
+.container {
+  width: 100vw;
+  height: 100px;
+  margin: 20px;
+}
+
+.panel {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.img {
+  width: 255px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.info h2 {
+  margin-top: 0;
+}
+
+.para {
+  max-width: 95%;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  text-align: start;
+}
+
+.reserveBtn {
+  width: 11.5rem;
+  height: 2.813rem;
+  border-radius: 0.4rem;
+  background-color: #0290ff;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.cancelBtn {
+  width: 11.5rem;
+  height: 2.813rem;
+  border-radius: 0.4rem;
+  background-color: #fff;
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.reserved {
+  background-color: #00d7c6;
+  border-radius: 6px;
+  width: 13px;
+  font-weight: bold;
+  padding: 3px;
+  margin-right: 9px;
+}

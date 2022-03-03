@@ -1,0 +1,68 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
+}
+
+.column-mission {
+  width: 10%;
+}
+
+.column-description {
+  width: 50%;
+}
+
+.column-status {
+  width: 20%;
+}
+
+.column-status-2 {
+  width: 20%;
+}
+
+.mission-join {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  padding: 8px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.mission-not-member {
+  padding: 5px 7px;
+  background-color: grey;
+  color: #fff;
+}
+
+.mission-member {
+  padding: 5px 7px;
+  background-color: teal;
+  color: #fff;
+}
+
+.mission-button:hover {
+  background-color: black;
+  color: #fff;
+}
+
+.mission-leave {
+  border: 2px solid red;
+  border-radius: 5px;
+  background-color: #fff;
+  color: red;
+  padding: 8px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.mission-cancel:hover {
+  background-color: red;
+  color: #fff;
+}

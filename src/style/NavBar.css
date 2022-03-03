@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f6f6f6;
+}
+
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+  list-style-type: none;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}

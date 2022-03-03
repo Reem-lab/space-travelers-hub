@@ -1,0 +1,17 @@
+.my-profile__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+}
+
+.my-profile__rockets {
+  grid-column: 1;
+}
+
+.my-profile__missions {
+  grid-column: 2;
+}
+
+.my-profile__dragons {
+  grid-column: 3;
+}
