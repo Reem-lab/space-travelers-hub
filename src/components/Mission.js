@@ -26,13 +26,14 @@ const Mission = ({
 
 Mission.defaultProps = {
   reserved: null,
+  toggleMission: null,
 };
 
 Mission.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  toggleMission: PropTypes.func.isRequired,
+  toggleMission: PropTypes.func,
   reserved: PropTypes.bool,
 };
 
