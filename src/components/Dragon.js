@@ -19,7 +19,7 @@ const Dragon = (props) => {
 
     <Row id={dragon.id} className="px-4">
       <Col sm={3} className="d-flex align-items-center p-0">
-        <Card.Img src={dragon.flickr_images[0]} />
+        <Card.Img src={dragon.image} />
       </Col>
       <Col sm={9} className="d-flex flex-column align-items-start">
         <Card.Title>

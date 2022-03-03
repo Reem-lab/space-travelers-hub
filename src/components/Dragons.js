@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Dragon from './Dragon';
-import { fetchDragons } from '../redux/actions/dragonsActions';
+import { loadDragons } from '../redux/actions/dragonsActions';
 
 const Dragons = () => {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ const Dragons = () => {
 
   useEffect(() => {
     if (dragons.length === 0) {
-      dispatch(fetchDragons());
+      dispatch(loadDragons());
     }
   }, []);
 

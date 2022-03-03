@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test render the Dragon Component Dragons section renders a hardcoded object, passed as a prop 1`] = `
+<div>
+  <div
+    class="px-4 row"
+    id="dragon 5"
+  >
+    <div
+      class="d-flex align-items-center p-0 col-sm-3"
+    >
+      <img
+        class="card-img"
+      />
+    </div>
+    <div
+      class="d-flex flex-column align-items-start col-sm-9"
+    >
+      <div
+        class="card-title h5"
+      >
+        dragonite
+        <span
+          class="mx-4 h6"
+        >
+          Type:
+          big capsule
+        </span>
+      </div>
+      <div
+        class="container p-0 flex-1"
+        data-test="container"
+      >
+        <p
+          class="text-left card-text"
+        >
+          <span
+            class="mx-4 h6 
+            d-none"
+          >
+            Reserved
+          </span>
+          ready to go to space
+        </p>
+      </div>
+      <button
+        class="btn btn-primary"
+        type="button"
+      >
+        Reserve Dragon
+      </button>
+    </div>
+    <hr />
+  </div>
+</div>
+`;
