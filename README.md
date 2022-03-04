@@ -91,7 +91,7 @@ After creating the production build, run:
  --- | --- |
  **GitHub**  | [@eduardosancho](https://github.com/eduardosancho)
  **Twitter** | [@sanchitobless](https://twitter.com/sanchitobless)
- **LinkedIn** | [Eduardo](https://www.linkedin.com/in/eduardo-sancho-043641181/)
+ **LinkedIn** | [Eduardo](https://www.linkedin.com/in/eduardo-sancho-solano/)
 
 👤 **Fabricio**
 
